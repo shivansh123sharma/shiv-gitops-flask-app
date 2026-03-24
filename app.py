@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 import os
 import socket
 
@@ -6,11 +6,8 @@ app= Flask(__name__)
 
 @app.route('/')
 def home():
-    return jsonify({
-        "service": "product-catalog-api",
-        "version": "1.0.0",
-        "status": "healthy"
-    })
+    return render_template("index.html")
+    
 @app.route('/health')
 def health():
     return jsonify({
