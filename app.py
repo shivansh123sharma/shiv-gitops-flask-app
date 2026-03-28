@@ -17,9 +17,9 @@ def health():
 @app.route('/products')
 def products():
         products = [
-            {"id": 1, "name": "laptop", "price": 50000, "stock": 100},
-            {"id": 2, "name": "charger", "price": 1400, "stock": 100},
-            {"id": 3, "name": "keyboard","price": 999, "stock": 20},
+            {"id": 1, "name": "Mobile", "price": 30000, "stock": 10},
+            {"id": 2, "name": "Powerbank", "price": 1100, "stock": 10},
+            {"id": 3, "name": "touchpad","price": 99, "stock": 20},
         ]
         return jsonify({"products": products, "count": len(products)})
 if __name__== '__main__':
